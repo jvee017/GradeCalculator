@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Grade Calculator</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Student Grade Calculator</h1>
+    <p class="subtitle">Enter the scores (0 to 100) to compute the final grade.</p>
+
+    <form action="/calculate" method="post">
+      <label for="name">Student name</label>
+      <input type="text" id="name" name="name" maxlength="50" required placeholder="e.g. Maria Santos">
+
+      <div class="grid">
+        <div>
+          <label for="quiz">Quiz (20%)</label>
+          <input type="number" id="quiz" name="quiz" min="0" max="100" step="any" required>
+        </div>
+        <div>
+          <label for="assignment">Assignment (20%)</label>
+          <input type="number" id="assignment" name="assignment" min="0" max="100" step="any" required>
+        </div>
+        <div>
+          <label for="midterm">Midterm Exam (25%)</label>
+          <input type="number" id="midterm" name="midterm" min="0" max="100" step="any" required>
+        </div>
+        <div>
+          <label for="final">Final Exam (35%)</label>
+          <input type="number" id="final" name="final" min="0" max="100" step="any" required>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Compute Grade</button>
+    </form>
+
+    <table class="scale">
+      <caption>Grading scale</caption>
+      <tr><th>Final Grade</th><th>Letter</th><th>Remark</th></tr>
+      <tr><td>90 – 100</td><td>A</td><td>Passed</td></tr>
+      <tr><td>80 – 89</td><td>B</td><td>Passed</td></tr>
+      <tr><td>70 – 79</td><td>C</td><td>Passed</td></tr>
+      <tr><td>60 – 69</td><td>D</td><td>Passed</td></tr>
+      <tr><td>Below 60</td><td>F</td><td>Failed</td></tr>
+    </table>
+  </main>
+</body>
+</html>
